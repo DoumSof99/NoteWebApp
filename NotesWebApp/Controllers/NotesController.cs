@@ -32,9 +32,10 @@ namespace NotesWebApp.Controllers
         }
 
         // POST: Notes/ShowSearchResults
-        public string ShowSearchResults(String SearchInformation)
+        public async Task<IActionResult> ShowSearchResults(String SearchInformation)
         {
-            return "You entered " + SearchInformation;
+            return View("Index", await _context.Note.Where(x => x.NoteInfo.Contains(SearchInformation) ||
+                                                            x.NoteTitle.Contains(SearchInformation)).ToListAsync());
         }
 
         // GET: Notes/Details/5
