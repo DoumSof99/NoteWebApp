@@ -1,2 +1,2 @@
 # NoteWebApp
-ASP .Net 6.0 app with CRUD oppertations, and connection to DB
+ASP .Net 5.0 app with CRUD oppertations, and connection to DB
