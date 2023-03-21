@@ -25,6 +25,18 @@ namespace NotesWebApp.Controllers
             return View(await _context.Note.ToListAsync());
         }
 
+        // GET: Notes/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+        }
+
+        // POST: Notes/ShowSearchResults
+        public string ShowSearchResults(String SearchInformation)
+        {
+            return "You entered " + SearchInformation;
+        }
+
         // GET: Notes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
